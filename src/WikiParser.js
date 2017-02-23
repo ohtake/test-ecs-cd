@@ -6,6 +6,9 @@ import toH from 'hast-to-hyperscript';
 import clone from 'lodash/clone';
 
 export default class WikiParser {
+  static functionToReduceCoverage(a, b) {
+    return a + b;
+  }
   static parseToHast(markdown) {
     const mdast = remark().parse(markdown);
     const hast = toHast(mdast);
